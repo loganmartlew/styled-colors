@@ -16,7 +16,7 @@ const rgbToHsla = (rgb: string): HSLA => {
   const min = Math.min(...colorArr);
   const max = Math.max(...colorArr);
 
-  const lightness = (min + max) / 2;
+  const lightness = +((min + max) / 2).toPrecision(2);
   const saturation = calculateSaturation(min, max, lightness);
   const hue = saturation === 0 ? 0 : calculateHue(red, green, blue, min, max); // If no saturation, hue is 0
 
