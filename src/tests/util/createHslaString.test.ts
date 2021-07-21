@@ -1,5 +1,5 @@
-import createHslaString from './createHslaString';
-import { HSLA } from '../types';
+import createHslaString from '../../util/createHslaString';
+import { HSLA } from '../../types';
 
 const colorDefault: HSLA = {
   hue: 0,
