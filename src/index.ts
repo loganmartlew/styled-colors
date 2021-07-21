@@ -46,4 +46,14 @@ export default class Color {
   fromHsl(hsl: string) {
     this.setColor(hslToHsla(hsl));
   }
+
+  lighten(percent: number) {}
+
+  darken(percent: number) {}
+
+  saturate(percent: number) {}
+
+  desaturate(percent: number) {}
+
+  shift(degrees: number) {}
 }
