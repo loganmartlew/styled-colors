@@ -1,5 +1,17 @@
 import { HSLA } from '../types';
 
+/**
+ * Function that converts an HSLA object to an HSLA string to be used in CSS
+ * eg: 'hsla(240, 50%, 100%, 1)'
+ *
+ * - Hue between 0 and 360
+ * - Saturation between 0 and 100
+ * - Lightness between 0 and 100
+ * - Alpha between 0 and 1
+ *
+ * @param hsla - Object containing hue, saturation, lightness, alpha
+ * @returns hsla string in the format 'hsla(hue, saturation%, lightness%, alpha)
+ */
 const createHslaString = (hsla: HSLA) => {
   if (!hsla) throw new Error('HSLA color was not provided');
 
