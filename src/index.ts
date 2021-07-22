@@ -10,6 +10,7 @@ import hslaToHsla from './util/stringToHsla/hslaToHsla';
 import { lighten, darken } from './util/modifiers/modifyLightness';
 import { saturate, desaturate } from './util/modifiers/modifySaturation';
 import { shiftHue } from './util/modifiers/modifyHue';
+import { modifyAlpha } from './util/modifiers/modifyAlpha';
 
 import { HSLA } from './types';
 
@@ -102,6 +103,11 @@ export default class Color {
 
   shiftHue(degrees: number) {
     const hsla = shiftHue(degrees, this.getHsla());
+    return createHslaString(hsla);
+  }
+
+  withOpacity(opacity: number) {
+    const hsla = modifyAlpha(opacity, this.getHsla());
     return createHslaString(hsla);
   }
 }

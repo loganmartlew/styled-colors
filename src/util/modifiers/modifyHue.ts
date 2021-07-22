@@ -1,11 +1,11 @@
 import { HSLA } from '../../types';
 
-export const shiftHue = (degrees: number, hsla: HSLA) => {
+export const shiftHue = (degrees: number, hsla: HSLA): HSLA => {
   const newHue = hsla.hue + degrees;
   return clampHue(newHue, hsla);
 };
 
-const clampHue = (newValue: number, hsla: HSLA) => {
+const clampHue = (newValue: number, hsla: HSLA): HSLA => {
   if (newValue > 360) {
     return {
       ...hsla,

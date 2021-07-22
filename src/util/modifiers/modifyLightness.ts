@@ -1,16 +1,16 @@
 import { HSLA } from '../../types';
 
-export const lighten = (percent: number, hsla: HSLA) => {
+export const lighten = (percent: number, hsla: HSLA): HSLA => {
   const newLightness = hsla.lightness + percent;
   return clampLightness(newLightness, hsla);
 };
 
-export const darken = (percent: number, hsla: HSLA) => {
+export const darken = (percent: number, hsla: HSLA): HSLA => {
   const newLightness = hsla.lightness - percent;
   return clampLightness(newLightness, hsla);
 };
 
-const clampLightness = (newValue: number, hsla: HSLA) => {
+const clampLightness = (newValue: number, hsla: HSLA): HSLA => {
   if (newValue > 100) {
     return {
       ...hsla,
