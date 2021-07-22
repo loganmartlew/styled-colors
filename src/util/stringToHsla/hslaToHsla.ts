@@ -18,6 +18,11 @@ const hslaToHsla = (hsla: string): HSLA => {
     return +trimmedValue;
   });
 
+  if (values[1] > 100 || values[1] < 0)
+    throw new Error('Value for saturation is out of bounds');
+  if (values[2] > 100 || values[2] < 0)
+    throw new Error('Value for lightness is out of bounds');
+
   return {
     hue: values[0],
     saturation: values[1],

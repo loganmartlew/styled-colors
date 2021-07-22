@@ -9,7 +9,6 @@ const rgbaToHsla = (rgba: string): HSLA => {
 
   const [red, green, blue, alphaString] = splitRgbAlpha(rgba);
 
-  console.log(`rgb(${red}, ${green}, ${blue})`);
   const hsla = rgbToHsla(`rgb(${red}, ${green}, ${blue})`);
   const alpha = +(+alphaString).toPrecision(2);
 

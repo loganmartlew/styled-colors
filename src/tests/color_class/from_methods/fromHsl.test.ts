@@ -45,7 +45,7 @@ test(`invalid hsl color should throw`, () => {
   );
 });
 
-const invalidColor4 = '319, 54%, 33%)';
+const invalidColor4 = '319, 54%, 33%';
 
 test(`invalid hsl color should throw`, () => {
   expect(() => new Color().fromHsl(invalidColor4)).toThrow(
