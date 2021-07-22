@@ -37,14 +37,17 @@ export default class Color {
 
   fromHex(hex: string) {
     this.setColor(hexToHsla(hex));
+    return this;
   }
 
   fromRgb(rgb: string) {
     this.setColor(rgbToHsla(rgb));
+    return this;
   }
 
   fromHsl(hsl: string) {
     this.setColor(hslToHsla(hsl));
+    return this;
   }
 
   lighten(percent: number) {}

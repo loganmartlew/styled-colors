@@ -7,6 +7,13 @@ const rgbToHsla = (rgb: string): HSLA => {
 
   const [redString, greenString, blueString] = getValuesFromRgbString(rgb);
 
+  if (+redString > 255 || +redString < 0)
+    throw new Error('Value for red is out of bounds');
+  if (+greenString > 255 || +greenString < 0)
+    throw new Error('Value for green is out of bounds');
+  if (+blueString > 255 || +blueString < 0)
+    throw new Error('Value for blue is out of bounds');
+
   const red = +redString / 255;
   const green = +greenString / 255;
   const blue = +blueString / 255;
