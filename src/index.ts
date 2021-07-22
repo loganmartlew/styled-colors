@@ -7,6 +7,10 @@ import rgbaToHsla from './util/stringToHsla/rgbaToHsla';
 import hslToHsla from './util/stringToHsla/hslToHsla';
 import hslaToHsla from './util/stringToHsla/hslaToHsla';
 
+import { lighten, darken } from './util/modifiers/modifyLightness';
+import { saturate, desaturate } from './util/modifiers/modifySaturation';
+import { shiftHue } from './util/modifiers/modifyHue';
+
 import { HSLA } from './types';
 
 export default class Color {
@@ -23,14 +27,9 @@ export default class Color {
   }
 
   getColor() {
-    const hslaColor: HSLA = {
-      hue: this.hue,
-      saturation: this.saturation,
-      lightness: this.lightness,
-      alpha: this.alpha,
-    };
+    const hsla = this.getHsla();
 
-    return createHslaString(hslaColor);
+    return createHslaString(hsla);
   }
 
   private setColor(hsla: HSLA) {
@@ -38,6 +37,17 @@ export default class Color {
     this.saturation = hsla.saturation;
     this.lightness = hsla.lightness;
     this.alpha = hsla.alpha;
+  }
+
+  private getHsla() {
+    const hsla: HSLA = {
+      hue: this.hue,
+      saturation: this.saturation,
+      lightness: this.lightness,
+      alpha: this.alpha,
+    };
+
+    return hsla;
   }
 
   fromHex(hex: string) {
@@ -70,13 +80,28 @@ export default class Color {
     return this;
   }
 
-  lighten(percent: number) {}
+  lighten(percent: number) {
+    const hsla = lighten(percent, this.getHsla());
+    return createHslaString(hsla);
+  }
 
-  darken(percent: number) {}
+  darken(percent: number) {
+    const hsla = darken(percent, this.getHsla());
+    return createHslaString(hsla);
+  }
 
-  saturate(percent: number) {}
+  saturate(percent: number) {
+    const hsla = saturate(percent, this.getHsla());
+    return createHslaString(hsla);
+  }
 
-  desaturate(percent: number) {}
+  desaturate(percent: number) {
+    const hsla = desaturate(percent, this.getHsla());
+    return createHslaString(hsla);
+  }
 
-  shift(degrees: number) {}
+  shiftHue(degrees: number) {
+    const hsla = shiftHue(degrees, this.getHsla());
+    return createHslaString(hsla);
+  }
 }
