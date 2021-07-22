@@ -1,7 +1,12 @@
 import createHslaString from './util/createHslaString';
+
 import hexToHsla from './util/hexToHsla';
+import hexAToHsla from './util/hexAToHsla';
 import rgbToHsla from './util/rgbToHsla';
+import rgbaToHsla from './util/rgbaToHsla';
 import hslToHsla from './util/hslToHsla';
+import hslaToHsla from './util/hslaToHsla';
+
 import { HSLA } from './types';
 
 export default class Color {
@@ -47,6 +52,21 @@ export default class Color {
 
   fromHsl(hsl: string) {
     this.setColor(hslToHsla(hsl));
+    return this;
+  }
+
+  fromHexA(hexA: string) {
+    this.setColor(hexAToHsla(hexA));
+    return this;
+  }
+
+  fromRgba(rgba: string) {
+    this.setColor(rgbaToHsla(rgba));
+    return this;
+  }
+
+  fromHsla(hsla: string) {
+    this.setColor(hslaToHsla(hsla));
     return this;
   }
 
