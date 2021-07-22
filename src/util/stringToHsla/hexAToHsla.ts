@@ -37,7 +37,8 @@ const getAlpha = (hexA: string) => {
   }
 
   if (hexA.length === 5) {
-    return hexA.slice(-1);
+    const hex = hexA.slice(-1);
+    return hex + hex;
   }
 
   throw new Error('HexA value is wrong length');

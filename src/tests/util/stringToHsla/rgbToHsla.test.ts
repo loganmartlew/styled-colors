@@ -67,7 +67,7 @@ test(`rgb color '${color5} should be ${hslToString(hsl5)}'`, () => {
 
 const colorInvalidRgb1 = '143, 56, 2';
 
-test(`invalid hex color should throw`, () => {
+test(`invalid rgb color should throw`, () => {
   expect(() => rgbToHsla(colorInvalidRgb1)).toThrow(
     'Provided string is not a valid rgb color'
   );
@@ -75,7 +75,7 @@ test(`invalid hex color should throw`, () => {
 
 const colorInvalidRgb2 = 'rgb(220, 45)';
 
-test(`invalid hex color should throw`, () => {
+test(`invalid rgb color should throw`, () => {
   expect(() => rgbToHsla(colorInvalidRgb2)).toThrow(
     'Provided string is not a valid rgb color'
   );
