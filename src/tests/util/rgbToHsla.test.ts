@@ -1,4 +1,4 @@
-import rgbToHsla from '../../util/rgbToHsla';
+import rgbToHsla from '../../util/stringToHsla/rgbToHsla';
 import { HSLA } from '../../types';
 
 const hslToString = (hsl: HSLA) => {

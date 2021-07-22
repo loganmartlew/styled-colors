@@ -1,4 +1,4 @@
-import { HSLA } from '../types';
+import { HSLA } from '../../types';
 
 const hslToHsla = (hsl: string): HSLA => {
   const hslColorRegex = /^hsl\(\d{1,3}, ?\d{1,3}%, ?\d{1,3}%\)$/;

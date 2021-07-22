@@ -1,4 +1,4 @@
-import { HSLA } from '../types';
+import { HSLA } from '../../types';
 
 const hslaToHsla = (hsla: string): HSLA => {
   const hslaColorRegex =

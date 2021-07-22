@@ -1,4 +1,4 @@
-import { HSLA } from '../types';
+import { HSLA } from '../../types';
 import rgbToHsla from './rgbToHsla';
 
 const rgbaToHsla = (rgba: string): HSLA => {

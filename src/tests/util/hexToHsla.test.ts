@@ -1,4 +1,4 @@
-import hexToHsla from '../../util/hexToHsla';
+import hexToHsla from '../../util/stringToHsla/hexToHsla';
 import { HSLA } from '../../types';
 
 const hslToString = (hsl: HSLA) => {

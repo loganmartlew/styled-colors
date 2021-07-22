@@ -1,5 +1,5 @@
 import rgbToHsla from './rgbToHsla';
-import { HSLA } from '../types';
+import { HSLA } from '../../types';
 
 /**
  *

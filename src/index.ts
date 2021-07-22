@@ -1,11 +1,11 @@
 import createHslaString from './util/createHslaString';
 
-import hexToHsla from './util/hexToHsla';
-import hexAToHsla from './util/hexAToHsla';
-import rgbToHsla from './util/rgbToHsla';
-import rgbaToHsla from './util/rgbaToHsla';
-import hslToHsla from './util/hslToHsla';
-import hslaToHsla from './util/hslaToHsla';
+import hexToHsla from './util/stringToHsla/hexToHsla';
+import hexAToHsla from './util/stringToHsla/hexAToHsla';
+import rgbToHsla from './util/stringToHsla/rgbToHsla';
+import rgbaToHsla from './util/stringToHsla/rgbaToHsla';
+import hslToHsla from './util/stringToHsla/hslToHsla';
+import hslaToHsla from './util/stringToHsla/hslaToHsla';
 
 import { HSLA } from './types';
 
