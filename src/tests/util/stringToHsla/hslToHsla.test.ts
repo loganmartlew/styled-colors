@@ -1,5 +1,5 @@
-import hslToHsla from '../../util/stringToHsla/hslToHsla';
-import { HSLA } from '../../types';
+import hslToHsla from '../../../util/stringToHsla/hslToHsla';
+import { HSLA } from '../../../types';
 
 const hslToString = (hsl: HSLA) => {
   return `hsl(${hsl.hue}, ${hsl.saturation}%, ${hsl.lightness}%)`;
