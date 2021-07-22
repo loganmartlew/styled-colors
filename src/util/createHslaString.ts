@@ -21,7 +21,7 @@ const createHslaString = (hsla: HSLA) => {
   if (hsla.alpha == null) throw new Error('Alpha was not provided');
 
   if (hsla.hue < 0 || hsla.hue > 360)
-    throw new Error('Hue was not in range 0-100');
+    throw new Error('Hue was not in range 0-360');
   if (hsla.saturation < 0 || hsla.saturation > 100)
     throw new Error('Saturation was not in range 0-100');
   if (hsla.lightness < 0 || hsla.lightness > 100)

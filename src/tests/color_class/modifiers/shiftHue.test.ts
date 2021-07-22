@@ -68,3 +68,21 @@ const baseColor = new Color().fromHsla(`hsla(${baseHue}, 0%, 0%, 1)`);
     expect(baseColor.shiftHue(-modifier)).toBe(expectedHslaMinus);
   });
 }
+
+{
+  const modifier = 1000;
+
+  const plusHue = 100;
+  const minusHue = 260;
+
+  const expectedHslaPlus = `hsla(${plusHue}, 0%, 0%, 1)`;
+  const expectedHslaMinus = `hsla(${minusHue}, 0%, 0%, 1)`;
+
+  test(`expect hsla to be ${expectedHslaPlus} (clamped)`, () => {
+    expect(baseColor.shiftHue(modifier)).toBe(expectedHslaPlus);
+  });
+
+  test(`expect hsla to be ${expectedHslaMinus} (clamped)`, () => {
+    expect(baseColor.shiftHue(-modifier)).toBe(expectedHslaMinus);
+  });
+}
